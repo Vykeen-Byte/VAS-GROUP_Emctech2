@@ -18,8 +18,6 @@ with open(classes_file, 'r') as f:
     classes = [line.strip() for line in f.readlines()]
 
 net = cv2.dnn.readNetFromDarknet('yolov3-tiny.cfg', 'yolov3-tiny.weights')
-
-# Set the preferred backend and target
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_DEFAULT)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
@@ -39,9 +37,7 @@ else:
     output_layers = net.getUnconnectedOutLayersNames()
     outputs = net.forward(output_layers)
 
-    # Iterate over each output layer
     for output in outputs:
-        # Iterate over each detection
         for detection in output:
             scores = detection[5:]
             class_id = np.argmax(scores)
