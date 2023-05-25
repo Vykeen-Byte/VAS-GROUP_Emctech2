@@ -7,6 +7,9 @@ st.write("# Object Detection using YOLOV3")
 """
 ### Final Exam: Model Deployment in the Cloud 
 **Emmanuel Villanueva**
+**John Terah Saquitan**
+**Michael Vincent R. Alcoseba**
+
 
 **CPE 019-CPE32S2 - Emerging Technologies 2 in CpE**
 """
